@@ -21,17 +21,7 @@ const FoodDisplay = () => {
   }, []);
 
   const getFoodImage = (id) => {
-    const images = {
-      "1": assets.food_1,
-      "2": assets.food_2,
-      "3": assets.food_3,
-      "4": assets.food_4,
-      "5": assets.food_5,
-      "6": assets.food_6,
-      "7": assets.food_7
-    };
-
-    return images[id];
+    return assets[`food_${id}`];
   };
 
   const filteredFood = foodList.filter((item) => {
@@ -39,10 +29,9 @@ const FoodDisplay = () => {
       selectedCategory === "All" ||
       item.category === selectedCategory;
 
-    const matchesSearch =
-      item.name
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase());
+    const matchesSearch = item.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
 
     return matchesCategory && matchesSearch;
   });
@@ -112,12 +101,28 @@ const FoodDisplay = () => {
           Cake
         </button>
 
+        <button
+          className={selectedCategory === "Sandwich" ? "active" : ""}
+          onClick={() => setSelectedCategory("Sandwich")}
+        >
+          Sandwich
+        </button>
+
+        <button
+          className={selectedCategory === "Juice" ? "active" : ""}
+          onClick={() => setSelectedCategory("Juice")}
+        >
+          Juice
+        </button>
+
       </div>
 
       <div className="food-display-list">
 
         {filteredFood.length > 0 ? (
+
           filteredFood.map((item) => (
+
             <FoodItem
               key={item.id}
               id={item.id}
@@ -126,11 +131,15 @@ const FoodDisplay = () => {
               description={`Delicious ${item.category.toLowerCase()} prepared with fresh ingredients.`}
               image={getFoodImage(item.id)}
             />
+
           ))
+
         ) : (
+
           <p className="no-food">
             No food items found.
           </p>
+
         )}
 
       </div>
