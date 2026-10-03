@@ -11,7 +11,7 @@ class OrderStatus extends Component {
       Preparing: 1,
       "Preparing Food": 1,
       "Out for Delivery": 2,
-      Delivered: 3
+      Delivered: 3,
     };
 
     return statusMap[status] !== undefined ? statusMap[status] : 0;
@@ -24,28 +24,49 @@ class OrderStatus extends Component {
       "Order Placed",
       "Preparing Food",
       "Out for Delivery",
-      "Delivered"
+      "Delivered",
     ];
 
     return (
       <div className="order-status">
-        <h3>Order Status</h3>
+        <h3>Order Tracking</h3>
 
-        <div className="status-timeline">
-          {statuses.map((status, index) => (
-            <div
-              key={status}
-              className={`status-step ${
-                index <= currentStatus ? "active" : ""
-              }`}
-            >
-              <span className="status-icon">
-                {index <= currentStatus ? "✓" : index + 1}
-              </span>
+        <div className="timeline">
+          {statuses.map((status, index) => {
+            const completed = index <= currentStatus;
+            const current = index === currentStatus;
 
-              <span>{status}</span>
-            </div>
-          ))}
+            return (
+              <div
+                className={`timeline-item ${
+                  completed ? "completed" : ""
+                } ${current ? "current" : ""}`}
+                key={status}
+              >
+                <div className="timeline-icon">
+                  {completed ? "✓" : index + 1}
+                </div>
+
+                <div className="timeline-content">
+                  <strong>{status}</strong>
+
+                  {current && (
+                    <span className="current-label">
+                      Current Status
+                    </span>
+                  )}
+                </div>
+
+                {index < statuses.length - 1 && (
+                  <div
+                    className={`timeline-line ${
+                      index < currentStatus ? "completed-line" : ""
+                    }`}
+                  ></div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     );
