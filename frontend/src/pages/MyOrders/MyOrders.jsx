@@ -84,10 +84,11 @@ const MyOrders = () => {
                 >
                   Status: {order.status}
                 </p>
+
+                {/* Class Component */}
+                <OrderStatus />
               </div>
             ))}
-
-            <OrderStatus />
           </>
         )}
       </div>
