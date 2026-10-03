@@ -1,0 +1,124 @@
+.checkout-page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+
+.checkout-left,
+.checkout-right {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-left h1 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.checkout-subtitle {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.checkout-left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-left label {
+  margin-top: 15px;
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-left input,
+.checkout-left textarea {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  outline: none;
+  font-size: 15px;
+}
+
+.checkout-left textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkout-left input:focus,
+.checkout-left textarea:focus {
+  border-color: tomato;
+}
+
+.checkout-left button {
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  background: tomato;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout-left button:hover {
+  background: #e64b35;
+}
+
+.checkout-right {
+  height: fit-content;
+}
+
+.checkout-right h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.checkout-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  color: #555;
+}
+
+.checkout-total {
+  font-size: 21px;
+  font-weight: bold;
+  color: #222;
+}
+
+.checkout-right hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.secure-box {
+  margin-top: 30px;
+  padding: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #fff6f3;
+  border-radius: 12px;
+}
+
+.secure-box p {
+  color: #888;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 750px) {
+  .checkout-page {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}

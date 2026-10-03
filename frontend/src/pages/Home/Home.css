@@ -1,0 +1,401 @@
+/* ================================
+   HOME PAGE
+================================ */
+
+.home-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 99, 71, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 40%,
+      rgba(255, 180, 80, 0.10),
+      transparent 30%
+    ),
+    #fffaf6;
+}
+
+
+/* ================================
+   HERO BACKGROUND
+================================ */
+
+.home-hero-section {
+  padding: 30px 0 20px;
+}
+
+
+/* ================================
+   EXPLORE SECTION
+================================ */
+
+.home-explore-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+
+/* ================================
+   FOOD SECTION
+================================ */
+
+.home-food-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 70px;
+}
+
+
+/* ================================
+   MOBILE APP SECTION
+================================ */
+
+.mobile-app-section {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  padding: 90px 20px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 180, 80, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #ff6347,
+      #ff7043,
+      #ff8a65
+    );
+
+  color: white;
+}
+
+.mobile-app-section::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 40px solid rgba(255, 255, 255, 0.08);
+  top: -100px;
+  left: -80px;
+}
+
+.mobile-app-section::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 50px solid rgba(255, 255, 255, 0.07);
+  bottom: -180px;
+  right: -100px;
+}
+
+.mobile-app-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: auto;
+}
+
+.mobile-app-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+
+  font-size: 32px;
+
+  backdrop-filter: blur(10px);
+}
+
+.section-small-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.mobile-app-content h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.mobile-app-content h2 span {
+  color: #fff1e9;
+}
+
+.mobile-app-description {
+  max-width: 650px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.92;
+}
+
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.app-buttons button {
+  border: none;
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: white;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.app-buttons button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact-section {
+  padding: 90px 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf6,
+      #fff
+    );
+}
+
+.contact-card {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+
+  padding: 55px;
+
+  background: white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(255, 99, 71, 0.08);
+}
+
+.contact-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+
+.contact-heading .section-small-title {
+  color: tomato;
+}
+
+.contact-heading h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.contact-heading h2 span {
+  color: tomato;
+}
+
+.contact-heading > p:last-child {
+  color: #777;
+  line-height: 1.7;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 45px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 25px;
+
+  background: #fff8f4;
+
+  border-radius: 18px;
+
+  transition: 0.3s;
+
+  border: 1px solid transparent;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 99, 71, 0.15);
+  box-shadow: 0 10px 25px rgba(255, 99, 71, 0.10);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  border-radius: 15px;
+
+  font-size: 23px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.contact-item h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-item p {
+  font-size: 13px;
+  color: #777;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.home-footer {
+  padding: 45px 20px;
+  text-align: center;
+
+  background: #202020;
+  color: white;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.home-footer > p {
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.footer-line {
+  width: 80%;
+  max-width: 800px;
+  height: 1px;
+  background: #3b3b3b;
+  margin: 25px auto;
+}
+
+.home-footer .copyright {
+  color: #777;
+  font-size: 12px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .home-hero-section {
+    padding: 15px 0;
+  }
+
+  .home-explore-section,
+  .home-food-section {
+    width: 92%;
+  }
+
+  .mobile-app-section {
+    padding: 70px 20px;
+  }
+
+  .mobile-app-content h2 {
+    font-size: 32px;
+  }
+
+  .contact-card {
+    padding: 35px 20px;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .mobile-app-content h2 {
+    font-size: 27px;
+  }
+
+  .mobile-app-description {
+    font-size: 13px;
+  }
+
+  .app-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-buttons button {
+    width: 220px;
+  }
+
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-heading h2 {
+    font-size: 30px;
+  }
+
+  .contact-item {
+    padding: 18px;
+  }
+
+}
